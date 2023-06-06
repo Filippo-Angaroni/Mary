@@ -1,3 +1,17 @@
+:root {
+  --album-div-width: 25vw;
+  --album-div-height: 35vw;
+  --album-div-max-width: 87vw;
+
+  --album-image-width: calc(var(--album-div-width) * 0.95);
+  --album-image-margin: calc((var(--album-div-width) - var(--album-image-width))/2);
+}
+
+@keyframes anim-album-div {
+  from { width: var(--album-div-width); }
+  to { width: var(--album-div-max-width);}
+}
+
 .main-body {
   background-color: black;
   overflow-x: hidden;
@@ -29,12 +43,12 @@ h2 {
   justify-content: center;
 }
 
-.beatles-song-div {
-  width: inherit;
-  height: inherit;
+.beatles-album-container {
+  width: 25vw;
+  height: 35vw;
   max-width: inherit;
   max-height: inherit;
-  margin-left: 3vw;
+  margin-left: 0vw;
   margin-right: 3vw;
   border-radius: inherit;
   /* box-shadow: 0vw 0vw 1vw red; */
@@ -43,15 +57,15 @@ h2 {
   backdrop-filter: blur(0px);
 }
 
-.beatles-song-div > .album-image {
-  width: 95%;
-  margin: 2.5%;
+.beatles-album-container > .album-image {
+  width: 94%;
+  margin: 3%;
   border-radius: 2vw;
   object-fit: contain;
   z-index: 1;
 }
 
-.beatles-song-div > .album-title {
+.beatles-album-container > .album-title {
   text-align: center;
   color: rgba(230, 230, 230);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -61,10 +75,10 @@ h2 {
 
 .beatles-album-div {
   background-color: transparent; 
-  width: 25vw; 
-  height: 35vw; 
+  width: var(--album-div-width); 
+  height: var(--album-div-height); 
   display: flex; 
-  justify-content: center;
+  justify-content: left;
   position: relative;  
   margin: 3vw;
   margin-top: 2vw;
