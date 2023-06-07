@@ -1,7 +1,9 @@
 :root {
   --album-div-width: 25vw;
   --album-div-height: 35vw;
-  --album-div-max-width: 87vw;
+  --album-container-max-width: 400px;
+  --album-container-max-height: 560px;
+  --album-div-animation-max-width: 87vw;
 
   --album-image-width: calc(var(--album-div-width) * 0.95);
   --album-image-margin: calc((var(--album-div-width) - var(--album-image-width))/2);
@@ -9,7 +11,7 @@
 
 @keyframes anim-album-div {
   from { width: var(--album-div-width); }
-  to { width: var(--album-div-max-width);}
+  to { width: var(--album-div-animation-max-width);}
 }
 
 .main-body {
@@ -24,7 +26,6 @@ h1 {
 h2 {
   font-size: 2.5vw;
   max-height: 90px;
-  
 }
 
 .title {
@@ -46,8 +47,8 @@ h2 {
 .beatles-album-container {
   width: 25vw;
   height: 35vw;
-  max-width: inherit;
-  max-height: inherit;
+  max-width: var(--album-container-max-width);
+  max-height: var(--album-container-max-height);
   margin-left: 0vw;
   margin-right: 3vw;
   border-radius: inherit;
@@ -74,25 +75,25 @@ h2 {
 }
 
 .beatles-album-div {
-  background-color: transparent; 
-  width: var(--album-div-width); 
-  height: var(--album-div-height); 
-  display: flex; 
+  background-color: transparent;
+  width: var(--album-div-width);
+  height: var(--album-div-height);
+  display: flex;
   justify-content: left;
-  position: relative;  
+  position: relative;
   margin: 3vw;
   margin-top: 2vw;
   margin-bottom: 2vw;
   border-radius: 2vw;
-  max-width: 400px;
-  max-height: 560px;
+  max-width: var(--album-container-max-width);
+  max-height: var(--album-container-max-height);
   cursor: pointer;
 }
 
 .beatles-album-div-blurred-bg {
   /* object-fit: none;  */
-  width: inherit; 
-  height: inherit; 
+  width: inherit;
+  height: inherit;
   border-radius: inherit;
   position: relative;
   overflow: hidden;

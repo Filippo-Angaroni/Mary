@@ -5,7 +5,7 @@ function ShowSongs(sender, albumIndex){
     sender.style.animation = "anim-album-div";
     sender.style.animationDuration = "1s";
     sender.style.animationFillMode = "forwards";
-    sender.style.maxWidth = "none";
+    sender.style.maxWidth = "1425px";
     var cl = document.getElementsByClassName("beatles-background-image-blur");
     for (i = 0; i < cl.length; i++){
         if (i == albumIndex){
