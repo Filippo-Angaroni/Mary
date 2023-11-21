@@ -2,7 +2,7 @@
  * @param {HTMLDivElement} sender
  */
 function ShowSongs(sender, albumIndex){
-    alert(sender.class);
+    alert(sender.id);
     sender.style.animation = "anim-album-div";
     sender.style.animationDuration = "1s";
     sender.style.animationFillMode = "forwards";
