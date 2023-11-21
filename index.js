@@ -2,7 +2,9 @@
  * @param {HTMLDivElement} sender
  */
 function ShowSongs(sender, albumIndex){
-    alert(sender.id);
+    if (sender.id == "sgtPeppers){
+        open("https://music.apple.com/it/album/sgt-peppers-lonely-hearts-club-band-super-deluxe-edition/1435552131");    
+    }
     sender.style.animation = "anim-album-div";
     sender.style.animationDuration = "1s";
     sender.style.animationFillMode = "forwards";
